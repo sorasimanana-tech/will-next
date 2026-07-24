@@ -93,4 +93,22 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll("[data-current-year]").forEach(function (node) {
     node.textContent = String(new Date().getFullYear());
   });
+  const backToTopButton = document.createElement("button");
+  backToTopButton.type = "button";
+  backToTopButton.className = "back-to-top";
+  backToTopButton.setAttribute("data-back-to-top", "");
+  backToTopButton.setAttribute("aria-label", "ページ上部へ戻る");
+  backToTopButton.innerHTML = '<span aria-hidden="true">↑</span>';
+  document.body.appendChild(backToTopButton);
+
+  function toggleBackToTopButton() {
+    backToTopButton.classList.toggle("is-visible", window.scrollY > 500);
+  }
+
+  backToTopButton.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  window.addEventListener("scroll", toggleBackToTopButton, { passive: true });
+  toggleBackToTopButton();
 });
