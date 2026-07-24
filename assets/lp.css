@@ -653,3 +653,15 @@ body {
     height: 2.9rem;
   }
 }
+/* Mobile web-production hero alignment */
+@media (max-width: 639px) {
+  .web-production-hero-label,
+  .web-production-hero-title {
+    text-align: center;
+  }
+
+  .web-production-hero-title {
+    max-width: 11.6em;
+    margin-inline: auto;
+  }
+}
