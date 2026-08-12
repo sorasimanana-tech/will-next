@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const filter = button.getAttribute("data-filter");
       filterButtons.forEach(function (item) {
         item.classList.toggle("is-active", item === button);
+        item.setAttribute("aria-pressed", item === button ? "true" : "false");
       });
       sampleCards.forEach(function (card) {
         card.hidden = filter !== "all" && card.getAttribute("data-category") !== filter;
@@ -70,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const image = button.querySelector("img");
       if (!image) return;
       lastFocusedElement = button;
-      modalImage.src = image.src;
+      modalImage.src = image.getAttribute("data-full-image") || image.src;
       modalImage.alt = image.alt;
       modal.classList.add("is-open");
       modal.setAttribute("aria-hidden", "false");

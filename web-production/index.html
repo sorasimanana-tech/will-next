@@ -210,32 +210,136 @@
           <p class="mt-4 text-sm leading-7 text-[#6B7888]">業種や雰囲気に合わせたデザイン見本です。画像を押すと大きく確認できます。</p>
         </div>
         <div class="mt-8 flex flex-wrap justify-center gap-2" aria-label="サンプルカテゴリー">
-          <button type="button" class="filter-button is-active" data-filter="all">すべて</button>
-          <button type="button" class="filter-button" data-filter="beauty">美容サロン</button>
-          <button type="button" class="filter-button" data-filter="food">飲食店</button>
-          <button type="button" class="filter-button" data-filter="business">企業・施設</button>
+          <button type="button" class="filter-button is-active" data-filter="all" aria-pressed="true">すべて</button>
+          <button type="button" class="filter-button" data-filter="beauty" aria-pressed="false">美容サロン</button>
+          <button type="button" class="filter-button" data-filter="food" aria-pressed="false">飲食店</button>
+          <button type="button" class="filter-button" data-filter="business" aria-pressed="false">企業・施設</button>
         </div>
         <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-          <article class="sample-card" data-category="beauty"><button type="button" class="sample-button" data-sample-image aria-label="ネイルサロンのサンプルを拡大"><img src="../images/samples/sample-01.jpg" alt="淡いピンクを基調としたネイルサロンのホームページサンプル" loading="lazy"></button><div class="p-4"><p class="font-bold text-[#465F7E]">ネイルサロン</p><p class="text-xs text-[#6B7888] mt-1">やわらかく上品なデザイン</p></div></article>
-          <article class="sample-card" data-category="beauty"><button type="button" class="sample-button" data-sample-image aria-label="アイラッシュサロンのサンプルを拡大"><img src="../images/samples/sample-02.jpg" alt="目元写真を活かしたアイラッシュサロンのホームページサンプル" loading="lazy"></button><div class="p-4"><p class="font-bold text-[#465F7E]">アイラッシュサロン</p><p class="text-xs text-[#6B7888] mt-1">施術イメージが伝わる構成</p></div></article>
-          <article class="sample-card" data-category="food"><button type="button" class="sample-button" data-sample-image aria-label="飲食店のサンプルを拡大"><img src="../images/samples/sample-03.jpg" alt="料理写真を大きく見せた飲食店のホームページサンプル" loading="lazy"></button><div class="p-4"><p class="font-bold text-[#465F7E]">飲食店</p><p class="text-xs text-[#6B7888] mt-1">料理と予約導線を重視</p></div></article>
-          <article class="sample-card" data-category="business"><button type="button" class="sample-button" data-sample-image aria-label="一般企業のサンプルを拡大"><img src="../images/samples/sample-04.jpg" alt="信頼感のあるネイビーを使った一般企業のホームページサンプル" loading="lazy"></button><div class="p-4"><p class="font-bold text-[#465F7E]">一般企業</p><p class="text-xs text-[#6B7888] mt-1">信頼性を重視した構成</p></div></article>
-          <article class="sample-card" data-category="beauty"><button type="button" class="sample-button" data-sample-image aria-label="ネイルサロンのサンプルを拡大"><img src="../images/samples/sample-05.jpg" alt="施術写真を多数掲載したネイルサロンのホームページサンプル" loading="lazy"></button><div class="p-4"><p class="font-bold text-[#465F7E]">ネイルサロン</p><p class="text-xs text-[#6B7888] mt-1">メニューを探しやすい設計</p></div></article>
-          <article class="sample-card" data-category="food"><button type="button" class="sample-button" data-sample-image aria-label="カフェのサンプルを拡大"><img src="../images/samples/sample-06.jpg" alt="温かみのあるカフェのホームページサンプル" loading="lazy"></button><div class="p-4"><p class="font-bold text-[#465F7E]">カフェ</p><p class="text-xs text-[#6B7888] mt-1">店舗の雰囲気が伝わる設計</p></div></article>
-          <article class="sample-card" data-category="beauty"><button type="button" class="sample-button" data-sample-image aria-label="アイラッシュサロンのサンプルを拡大"><img src="../images/samples/sample-07.jpg" alt="清潔感のあるアイラッシュサロンのホームページサンプル" loading="lazy"></button><div class="p-4"><p class="font-bold text-[#465F7E]">アイラッシュサロン</p><p class="text-xs text-[#6B7888] mt-1">メニュー比較がしやすい構成</p></div></article>
-          <article class="sample-card" data-category="business"><button type="button" class="sample-button" data-sample-image aria-label="企業サイトのサンプルを拡大"><img src="../images/samples/sample-08.jpg" alt="サービス案内を整理した企業ホームページサンプル" loading="lazy"></button><div class="p-4"><p class="font-bold text-[#465F7E]">一般企業</p><p class="text-xs text-[#6B7888] mt-1">サービス内容を明確に整理</p></div></article>
-          <article class="sample-card" data-category="beauty"><button type="button" class="sample-button" data-sample-image aria-label="ネイルサロンのサンプルを拡大"><img src="../images/samples/sample-09.jpg" alt="黒とピンクを使ったネイルサロンのホームページサンプル" loading="lazy"></button><div class="p-4"><p class="font-bold text-[#465F7E]">ネイルサロン</p><p class="text-xs text-[#6B7888] mt-1">個性を強く打ち出すデザイン</p></div></article>
-          <article class="sample-card" data-category="beauty"><button type="button" class="sample-button" data-sample-image aria-label="アイラッシュサロンのサンプルを拡大"><img src="../images/samples/sample-10.jpg" alt="黒を基調としたアイラッシュサロンのホームページサンプル" loading="lazy"></button><div class="p-4"><p class="font-bold text-[#465F7E]">アイラッシュサロン</p><p class="text-xs text-[#6B7888] mt-1">高級感を重視したデザイン</p></div></article>
-          <article class="sample-card" data-category="beauty"><button type="button" class="sample-button" data-sample-image aria-label="エステサロンのサンプルを拡大"><img src="../images/samples/sample-11.jpg" alt="美容メニューを豊富に掲載したエステサロンのホームページサンプル" loading="lazy"></button><div class="p-4"><p class="font-bold text-[#465F7E]">エステサロン</p><p class="text-xs text-[#6B7888] mt-1">施術内容を比較しやすい構成</p></div></article>
-          <article class="sample-card" data-category="beauty"><button type="button" class="sample-button" data-sample-image aria-label="リラクサロンのサンプルを拡大"><img src="../images/samples/sample-12.jpg" alt="自然な色合いのリラクゼーションサロンのホームページサンプル" loading="lazy"></button><div class="p-4"><p class="font-bold text-[#465F7E]">リラクサロン</p><p class="text-xs text-[#6B7888] mt-1">安心感のある落ち着いた設計</p></div></article>
-          <article class="sample-card" data-category="beauty"><button type="button" class="sample-button" data-sample-image aria-label="ネイルサロンのサンプルを拡大"><img src="../images/samples/sample-13.jpg" alt="ブルーを基調としたネイルサロンのホームページサンプル" loading="lazy"></button><div class="p-4"><p class="font-bold text-[#465F7E]">ネイルサロン</p><p class="text-xs text-[#6B7888] mt-1">爽やかで清潔感のあるデザイン</p></div></article>
-          <article class="sample-card" data-category="business"><button type="button" class="sample-button" data-sample-image aria-label="整体院のサンプルを拡大"><img src="../images/samples/sample-14.jpg" alt="施術内容を分かりやすく整理した整体院のホームページサンプル" loading="lazy"></button><div class="p-4"><p class="font-bold text-[#465F7E]">整体院</p><p class="text-xs text-[#6B7888] mt-1">症状と施術を整理した構成</p></div></article>
-          <article class="sample-card" data-category="business"><button type="button" class="sample-button" data-sample-image aria-label="施設サイトのサンプルを拡大"><img src="../images/samples/sample-15.png" alt="親しみやすい施設ホームページのサンプル" loading="lazy"></button><div class="p-4"><p class="font-bold text-[#465F7E]">施設・サービス</p><p class="text-xs text-[#6B7888] mt-1">情報量の多い内容を整理</p></div></article>
-          <article class="sample-card" data-category="beauty"><button type="button" class="sample-button" data-sample-image aria-label="ネイルサロンのサンプルを拡大"><img src="../images/samples/sample-16.jpg" alt="縦長スマートフォン表示のネイルサロンホームページサンプル" loading="lazy"></button><div class="p-4"><p class="font-bold text-[#465F7E]">ネイルサロン</p><p class="text-xs text-[#6B7888] mt-1">スマートフォン中心の設計</p></div></article>
-          <article class="sample-card" data-category="beauty"><button type="button" class="sample-button" data-sample-image aria-label="アイラッシュサロンのサンプルを拡大"><img src="../images/samples/sample-17.jpg" alt="黒を基調とした縦長アイラッシュサロンホームページサンプル" loading="lazy"></button><div class="p-4"><p class="font-bold text-[#465F7E]">アイラッシュサロン</p><p class="text-xs text-[#6B7888] mt-1">スマホで見やすい縦長構成</p></div></article>
-          <article class="sample-card" data-category="beauty"><button type="button" class="sample-button" data-sample-image aria-label="美容院のサンプルを拡大"><img src="../images/samples/sample-22.jpg" alt="パソコンとスマートフォンに対応した美容院ホームページサンプル" loading="lazy"></button><div class="p-4"><p class="font-bold text-[#465F7E]">美容院</p><p class="text-xs text-[#6B7888] mt-1">端末ごとに見やすいレスポンシブ設計</p></div></article>
-          <article class="sample-card" data-category="food"><button type="button" class="sample-button" data-sample-image aria-label="飲食店のサンプルを拡大"><img src="../images/samples/sample-23.jpg" alt="パソコンとスマートフォンに対応した飲食店ホームページサンプル" loading="lazy"></button><div class="p-4"><p class="font-bold text-[#465F7E]">飲食店</p><p class="text-xs text-[#6B7888] mt-1">メニューと予約を重視した設計</p></div></article>
-          <article class="sample-card" data-category="beauty"><button type="button" class="sample-button" data-sample-image aria-label="エステサロンのサンプルを拡大"><img src="../images/samples/sample-24.jpg" alt="パソコンとスマートフォンに対応したエステサロンホームページサンプル" loading="lazy"></button><div class="p-4"><p class="font-bold text-[#465F7E]">エステサロン</p><p class="text-xs text-[#6B7888] mt-1">予約導線を分かりやすく配置</p></div></article>
+          <article class="sample-card" data-category="beauty">
+            <button type="button" class="sample-button" data-sample-image aria-label="ネイルサロン LUMIÈREのサンプルを拡大"><img src="../images/samples-20260812/thumbs/nail-lumiere.webp" data-full-image="../images/samples-20260812/nail-lumiere.webp" alt="上品なベージュを基調としたネイルサロンのパソコン・スマートフォン対応ホームページサンプル" loading="lazy" width="720" height="540"></button>
+            <div class="p-4"><p class="font-bold text-[#465F7E]">ネイルサロン｜LUMIÈRE</p><p class="text-xs text-[#6B7888] mt-1">上品でやわらかな世界観を端末ごとに表現</p></div>
+          </article>
+          <article class="sample-card" data-category="beauty">
+            <button type="button" class="sample-button" data-sample-image aria-label="ネイルサロン NOIRのサンプルを拡大"><img src="../images/samples-20260812/thumbs/nail-noir.webp" data-full-image="../images/samples-20260812/nail-noir.webp" alt="黒とゴールドを基調とした高級感のあるネイルサロンのホームページサンプル" loading="lazy" width="720" height="540"></button>
+            <div class="p-4"><p class="font-bold text-[#465F7E]">ネイルサロン｜NOIR</p><p class="text-xs text-[#6B7888] mt-1">黒とゴールドで高級感を強調</p></div>
+          </article>
+          <article class="sample-card" data-category="beauty">
+            <button type="button" class="sample-button" data-sample-image aria-label="ネイルサロン ÉCLATのサンプルを拡大"><img src="../images/samples-20260812/thumbs/nail-eclat.webp" data-full-image="../images/samples-20260812/nail-eclat.webp" alt="ネイルデザイン例を見やすく配置したネイルサロンのホームページサンプル" loading="lazy" width="720" height="540"></button>
+            <div class="p-4"><p class="font-bold text-[#465F7E]">ネイルサロン｜ÉCLAT</p><p class="text-xs text-[#6B7888] mt-1">施術写真とデザイン例を見やすく整理</p></div>
+          </article>
+          <article class="sample-card" data-category="beauty">
+            <button type="button" class="sample-button" data-sample-image aria-label="ネイルサロン LUNEのサンプルを拡大"><img src="../images/samples-20260812/thumbs/nail-lune.webp" data-full-image="../images/samples-20260812/nail-lune.webp" alt="店内写真と施術メニューを上品に紹介するネイルサロンのホームページサンプル" loading="lazy" width="720" height="540"></button>
+            <div class="p-4"><p class="font-bold text-[#465F7E]">ネイルサロン｜LUNE</p><p class="text-xs text-[#6B7888] mt-1">店内の雰囲気とメニューを上品に紹介</p></div>
+          </article>
+          <article class="sample-card" data-category="beauty">
+            <button type="button" class="sample-button" data-sample-image aria-label="ネイルサロン KAGEのサンプルを拡大"><img src="../images/samples-20260812/thumbs/nail-kage.webp" data-full-image="../images/samples-20260812/nail-kage.webp" alt="黒を基調に個性的なネイルを見せるネイルサロンのホームページサンプル" loading="lazy" width="720" height="540"></button>
+            <div class="p-4"><p class="font-bold text-[#465F7E]">ネイルサロン｜KAGE</p><p class="text-xs text-[#6B7888] mt-1">ダークトーンで個性と世界観を演出</p></div>
+          </article>
+          <article class="sample-card" data-category="beauty">
+            <button type="button" class="sample-button" data-sample-image aria-label="アイラッシュサロン LILAS EYEのサンプルを拡大"><img src="../images/samples-20260812/thumbs/eyelash-lilas.webp" data-full-image="../images/samples-20260812/eyelash-lilas.webp" alt="目元デザインを比較しやすく配置したアイラッシュサロンのホームページサンプル" loading="lazy" width="720" height="540"></button>
+            <div class="p-4"><p class="font-bold text-[#465F7E]">アイラッシュサロン｜LILAS EYE</p><p class="text-xs text-[#6B7888] mt-1">目元デザインを比較しやすい構成</p></div>
+          </article>
+          <article class="sample-card" data-category="beauty">
+            <button type="button" class="sample-button" data-sample-image aria-label="アイラッシュサロン MELLOWのサンプルを拡大"><img src="../images/samples-20260812/thumbs/eyelash-mellow.webp" data-full-image="../images/samples-20260812/eyelash-mellow.webp" alt="カウンセリングと施術メニューを案内するアイラッシュサロンのホームページサンプル" loading="lazy" width="720" height="540"></button>
+            <div class="p-4"><p class="font-bold text-[#465F7E]">アイラッシュサロン｜MELLOW</p><p class="text-xs text-[#6B7888] mt-1">施術相談とメニュー選びを自然に案内</p></div>
+          </article>
+          <article class="sample-card" data-category="beauty">
+            <button type="button" class="sample-button" data-sample-image aria-label="アイラッシュサロン VUE EYEのサンプルを拡大"><img src="../images/samples-20260812/thumbs/eyelash-vue.webp" data-full-image="../images/samples-20260812/eyelash-vue.webp" alt="濃紺を基調に目元写真を印象的に見せるアイラッシュサロンのホームページサンプル" loading="lazy" width="720" height="540"></button>
+            <div class="p-4"><p class="font-bold text-[#465F7E]">アイラッシュサロン｜VUE EYE</p><p class="text-xs text-[#6B7888] mt-1">濃色デザインで目元の魅力を訴求</p></div>
+          </article>
+          <article class="sample-card" data-category="beauty">
+            <button type="button" class="sample-button" data-sample-image aria-label="フェイシャルサロンのサンプルを拡大"><img src="../images/samples-20260812/thumbs/facial-salon.webp" data-full-image="../images/samples-20260812/facial-salon.webp" alt="明るく清潔感のあるフェイシャルサロンのホームページサンプル" loading="lazy" width="720" height="540"></button>
+            <div class="p-4"><p class="font-bold text-[#465F7E]">フェイシャルサロン</p><p class="text-xs text-[#6B7888] mt-1">清潔感と安心感が伝わる明るい構成</p></div>
+          </article>
+          <article class="sample-card" data-category="beauty">
+            <button type="button" class="sample-button" data-sample-image aria-label="エステサロン VERDE SKINのサンプルを拡大"><img src="../images/samples-20260812/thumbs/esthetic-verde.webp" data-full-image="../images/samples-20260812/esthetic-verde.webp" alt="深いグリーンで落ち着いた空間を表現したエステサロンのホームページサンプル" loading="lazy" width="720" height="540"></button>
+            <div class="p-4"><p class="font-bold text-[#465F7E]">エステサロン｜VERDE SKIN</p><p class="text-xs text-[#6B7888] mt-1">落ち着いた空間と施術価値を丁寧に表現</p></div>
+          </article>
+          <article class="sample-card" data-category="business">
+            <button type="button" class="sample-button" data-sample-image aria-label="整体スタジオ AXISのサンプルを拡大"><img src="../images/samples-20260812/thumbs/seitai-axis.webp" data-full-image="../images/samples-20260812/seitai-axis.webp" alt="姿勢分析と予約導線を分かりやすく配置した整体スタジオのホームページサンプル" loading="lazy" width="720" height="540"></button>
+            <div class="p-4"><p class="font-bold text-[#465F7E]">整体スタジオ｜AXIS</p><p class="text-xs text-[#6B7888] mt-1">姿勢分析から予約までを明快に案内</p></div>
+          </article>
+          <article class="sample-card" data-category="business">
+            <button type="button" class="sample-button" data-sample-image aria-label="整体院 ひだまりのサンプルを拡大"><img src="../images/samples-20260812/thumbs/seitai-hidamari.webp" data-full-image="../images/samples-20260812/seitai-hidamari.webp" alt="身体の悩みと相談予約を親しみやすく案内する整体院のホームページサンプル" loading="lazy" width="720" height="540"></button>
+            <div class="p-4"><p class="font-bold text-[#465F7E]">整体院｜ひだまり</p><p class="text-xs text-[#6B7888] mt-1">悩み別の案内と相談予約を親しみやすく配置</p></div>
+          </article>
+          <article class="sample-card" data-category="beauty">
+            <button type="button" class="sample-button" data-sample-image aria-label="タイ古式サロン SIAM LOTUSのサンプルを拡大"><img src="../images/samples-20260812/thumbs/thai-siam-lotus.webp" data-full-image="../images/samples-20260812/thai-siam-lotus.webp" alt="タイ古式施術の非日常感を重厚な色合いで表現したリラクゼーションサロンのホームページサンプル" loading="lazy" width="720" height="540"></button>
+            <div class="p-4"><p class="font-bold text-[#465F7E]">タイ古式サロン｜SIAM LOTUS</p><p class="text-xs text-[#6B7888] mt-1">非日常感と高級感を伝える重厚なデザイン</p></div>
+          </article>
+          <article class="sample-card" data-category="beauty">
+            <button type="button" class="sample-button" data-sample-image aria-label="タイハーブサロン CHADAのサンプルを拡大"><img src="../images/samples-20260812/thumbs/thai-chada.webp" data-full-image="../images/samples-20260812/thai-chada.webp" alt="タイハーブと施術メニューを爽やかに紹介するリラクゼーションサロンのホームページサンプル" loading="lazy" width="720" height="540"></button>
+            <div class="p-4"><p class="font-bold text-[#465F7E]">タイハーブサロン｜CHADA</p><p class="text-xs text-[#6B7888] mt-1">自然素材と施術メニューを爽やかに紹介</p></div>
+          </article>
+          <article class="sample-card" data-category="business">
+            <button type="button" class="sample-button" data-sample-image aria-label="一般企業 HORIZONのサンプルを拡大"><img src="../images/samples-20260812/thumbs/corporate-horizon.webp" data-full-image="../images/samples-20260812/corporate-horizon.jpg" alt="ネイビーを基調に事業内容と信頼性を伝える一般企業のホームページサンプル" loading="lazy" width="720" height="540"></button>
+            <div class="p-4"><p class="font-bold text-[#465F7E]">一般企業｜HORIZON</p><p class="text-xs text-[#6B7888] mt-1">事業内容と信頼性を端的に伝える構成</p></div>
+          </article>
+          <article class="sample-card" data-category="business">
+            <button type="button" class="sample-button" data-sample-image aria-label="IT企業 NEXCOREのサンプルを拡大"><img src="../images/samples-20260812/thumbs/corporate-nexcore.webp" data-full-image="../images/samples-20260812/corporate-nexcore.jpg" alt="ITサービスと技術力を視覚的に整理した企業ホームページのサンプル" loading="lazy" width="720" height="540"></button>
+            <div class="p-4"><p class="font-bold text-[#465F7E]">IT企業｜NEXCORE</p><p class="text-xs text-[#6B7888] mt-1">技術力とサービス領域を視覚的に整理</p></div>
+          </article>
+          <article class="sample-card" data-category="business">
+            <button type="button" class="sample-button" data-sample-image aria-label="環境・地域企業 MIDORI GROUPのサンプルを拡大"><img src="../images/samples-20260812/thumbs/corporate-midori.webp" data-full-image="../images/samples-20260812/corporate-midori.jpg" alt="環境への理念と地域での取り組みを伝える企業ホームページのサンプル" loading="lazy" width="720" height="540"></button>
+            <div class="p-4"><p class="font-bold text-[#465F7E]">環境・地域企業｜MIDORI GROUP</p><p class="text-xs text-[#6B7888] mt-1">理念と取り組みを親しみやすく発信</p></div>
+          </article>
+          <article class="sample-card" data-category="beauty">
+            <button type="button" class="sample-button" data-sample-image aria-label="美容室 LUMIÈRE HAIRのサンプルを拡大"><img src="../images/samples-20260812/thumbs/hair-lumiere.webp" data-full-image="../images/samples-20260812/hair-lumiere.webp" alt="ヘアスタイルと上質な雰囲気を軽やかに表現した美容室のホームページサンプル" loading="lazy" width="720" height="540"></button>
+            <div class="p-4"><p class="font-bold text-[#465F7E]">美容室｜LUMIÈRE HAIR</p><p class="text-xs text-[#6B7888] mt-1">ヘアスタイルと上質感を軽やかに表現</p></div>
+          </article>
+          <article class="sample-card" data-category="beauty">
+            <button type="button" class="sample-button" data-sample-image aria-label="ヘッドスパ・美容サロン MORIのサンプルを拡大"><img src="../images/samples-20260812/thumbs/hair-mori-spa.webp" data-full-image="../images/samples-20260812/hair-mori-spa.webp" alt="自然に囲まれた癒やしの空間を表現したヘッドスパ・美容サロンのホームページサンプル" loading="lazy" width="720" height="540"></button>
+            <div class="p-4"><p class="font-bold text-[#465F7E]">ヘッドスパ・美容サロン｜MORI</p><p class="text-xs text-[#6B7888] mt-1">癒やしの空間と施術内容を自然に案内</p></div>
+          </article>
+          <article class="sample-card" data-category="beauty">
+            <button type="button" class="sample-button" data-sample-image aria-label="美容室 NEON CROPのサンプルを拡大"><img src="../images/samples-20260812/thumbs/hair-neon-crop.webp" data-full-image="../images/samples-20260812/hair-neon-crop.webp" alt="鮮やかな色彩で個性とトレンド感を打ち出した美容室のホームページサンプル" loading="lazy" width="720" height="540"></button>
+            <div class="p-4"><p class="font-bold text-[#465F7E]">美容室｜NEON CROP</p><p class="text-xs text-[#6B7888] mt-1">個性とトレンド感を鮮やかに訴求</p></div>
+          </article>
+          <article class="sample-card" data-category="beauty">
+            <button type="button" class="sample-button" data-sample-image aria-label="バーバーショップのサンプルを拡大"><img src="../images/samples-20260812/thumbs/barbershop.webp" data-full-image="../images/samples-20260812/barbershop.jpg" alt="技術力と店舗の世界観を重厚に表現したバーバーショップのホームページサンプル" loading="lazy" width="720" height="540"></button>
+            <div class="p-4"><p class="font-bold text-[#465F7E]">バーバーショップ</p><p class="text-xs text-[#6B7888] mt-1">技術力と店舗の世界観を力強く表現</p></div>
+          </article>
+          <article class="sample-card" data-category="beauty">
+            <button type="button" class="sample-button" data-sample-image aria-label="美容室 スタイルギャラリーのサンプルを拡大"><img src="../images/samples-20260812/thumbs/hair-style-gallery.webp" data-full-image="../images/samples-20260812/hair-style-gallery.jpg" alt="ヘアスタイル事例と予約導線を整理した美容室のホームページサンプル" loading="lazy" width="720" height="540"></button>
+            <div class="p-4"><p class="font-bold text-[#465F7E]">美容室｜スタイルギャラリー</p><p class="text-xs text-[#6B7888] mt-1">スタイル事例と予約導線を分かりやすく配置</p></div>
+          </article>
+          <article class="sample-card" data-category="food">
+            <button type="button" class="sample-button" data-sample-image aria-label="レストラン モダンダイニングのサンプルを拡大"><img src="../images/samples-20260812/thumbs/restaurant-modern.webp" data-full-image="../images/samples-20260812/restaurant-modern.jpg" alt="料理写真と予約導線を印象的に配置したレストランのホームページサンプル" loading="lazy" width="720" height="540"></button>
+            <div class="p-4"><p class="font-bold text-[#465F7E]">レストラン｜モダンダイニング</p><p class="text-xs text-[#6B7888] mt-1">料理の魅力と予約導線を印象的に構成</p></div>
+          </article>
+          <article class="sample-card" data-category="beauty">
+            <button type="button" class="sample-button" data-sample-image aria-label="ウェルネスサロンのサンプルを拡大"><img src="../images/samples-20260812/thumbs/wellness-salon.webp" data-full-image="../images/samples-20260812/wellness-salon.jpg" alt="施術メニューと安心感をやさしい色合いで紹介するウェルネスサロンのホームページサンプル" loading="lazy" width="720" height="540"></button>
+            <div class="p-4"><p class="font-bold text-[#465F7E]">ウェルネスサロン</p><p class="text-xs text-[#6B7888] mt-1">施術メニューと安心感をやさしく紹介</p></div>
+          </article>
+          <article class="sample-card" data-category="food">
+            <button type="button" class="sample-button" data-sample-image aria-label="カフェ HINATA COFFEEのサンプルを拡大"><img src="../images/samples-20260812/thumbs/cafe-hinata.webp" data-full-image="../images/samples-20260812/cafe-hinata.webp" alt="カフェメニューと店舗の温かさを明るく伝えるホームページサンプル" loading="lazy" width="720" height="540"></button>
+            <div class="p-4"><p class="font-bold text-[#465F7E]">カフェ｜HINATA COFFEE</p><p class="text-xs text-[#6B7888] mt-1">メニューと店舗の温かさを明るく発信</p></div>
+          </article>
+          <article class="sample-card" data-category="food">
+            <button type="button" class="sample-button" data-sample-image aria-label="会席料理店 KAGURAのサンプルを拡大"><img src="../images/samples-20260812/thumbs/restaurant-kagura.webp" data-full-image="../images/samples-20260812/restaurant-kagura.webp" alt="会席料理の写真を主役にした格調高い飲食店ホームページのサンプル" loading="lazy" width="720" height="540"></button>
+            <div class="p-4"><p class="font-bold text-[#465F7E]">会席料理店｜KAGURA</p><p class="text-xs text-[#6B7888] mt-1">料理写真を主役にした格調高いデザイン</p></div>
+          </article>
+          <article class="sample-card" data-category="food">
+            <button type="button" class="sample-button" data-sample-image aria-label="ベーカリー PAN NO MORIのサンプルを拡大"><img src="../images/samples-20260812/thumbs/bakery-pan-no-mori.webp" data-full-image="../images/samples-20260812/bakery-pan-no-mori.webp" alt="パンの商品情報と焼きたての魅力を親しみやすく伝えるベーカリーのホームページサンプル" loading="lazy" width="720" height="540"></button>
+            <div class="p-4"><p class="font-bold text-[#465F7E]">ベーカリー｜PAN NO MORI</p><p class="text-xs text-[#6B7888] mt-1">焼きたての魅力と商品情報を親しみやすく紹介</p></div>
+          </article>
+          <article class="sample-card" data-category="food">
+            <button type="button" class="sample-button" data-sample-image aria-label="イタリアン TRATTORIA LUCEのサンプルを拡大"><img src="../images/samples-20260812/thumbs/restaurant-trattoria.webp" data-full-image="../images/samples-20260812/restaurant-trattoria.webp" alt="パスタ料理と店内の雰囲気を印象的に見せるイタリアンレストランのホームページサンプル" loading="lazy" width="720" height="540"></button>
+            <div class="p-4"><p class="font-bold text-[#465F7E]">イタリアン｜TRATTORIA LUCE</p><p class="text-xs text-[#6B7888] mt-1">料理と店内の雰囲気を印象的に表現</p></div>
+          </article>
+          <article class="sample-card" data-category="food">
+            <button type="button" class="sample-button" data-sample-image aria-label="焼肉店のサンプルを拡大"><img src="../images/samples-20260812/thumbs/restaurant-yakiniku.webp" data-full-image="../images/samples-20260812/restaurant-yakiniku.webp" alt="焼肉の料理写真を力強く見せる飲食店ホームページのサンプル" loading="lazy" width="720" height="540"></button>
+            <div class="p-4"><p class="font-bold text-[#465F7E]">焼肉店</p><p class="text-xs text-[#6B7888] mt-1">力強い料理写真で来店意欲を高める構成</p></div>
+          </article>
+          <article class="sample-card" data-category="beauty">
+            <button type="button" class="sample-button" data-sample-image aria-label="美容室 SHIZEN HAIRのサンプルを拡大"><img src="../images/samples-20260812/thumbs/hair-shizen.webp" data-full-image="../images/samples-20260812/hair-shizen.jpg" alt="自然体の世界観とスタッフ情報を整理した美容室のホームページサンプル" loading="lazy" width="720" height="540"></button>
+            <div class="p-4"><p class="font-bold text-[#465F7E]">美容室｜SHIZEN HAIR</p><p class="text-xs text-[#6B7888] mt-1">自然体の世界観とスタッフ情報を整理</p></div>
+          </article>
+          <article class="sample-card" data-category="beauty">
+            <button type="button" class="sample-button" data-sample-image aria-label="美容室 VIBE STUDIOのサンプルを拡大"><img src="../images/samples-20260812/thumbs/hair-vibe-studio.webp" data-full-image="../images/samples-20260812/hair-vibe-studio.webp" alt="鮮やかな色彩で個性とヘアスタイルを訴求する美容室のホームページサンプル" loading="lazy" width="720" height="540"></button>
+            <div class="p-4"><p class="font-bold text-[#465F7E]">美容室｜VIBE STUDIO</p><p class="text-xs text-[#6B7888] mt-1">鮮やかな色彩で個性とスタイルを訴求</p></div>
+          </article>
         </div>
       </div>
     </section>
