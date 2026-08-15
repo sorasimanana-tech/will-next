@@ -45,20 +45,37 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "ウィルネクスト合同会社",
-    "description": "美容サロンの集客、再来、客単価、店舗運営、AI活用を支援するコンサルティングサービスです。",
-    "telephone": "090-6188-1722",
-    "email": "consul.will.next@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "postalCode": "273-0112",
-      "addressRegion": "千葉県",
-      "addressLocality": "鎌ケ谷市",
-      "streetAddress": "東中沢1-11-36",
-      "addressCountry": "JP"
-    },
-    "areaServed": "JP"
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://will-next1.github.io/will-next/salon-consulting/#service",
+        "url": "https://will-next1.github.io/will-next/salon-consulting/",
+        "name": "美容サロンコンサルティング",
+        "description": "美容サロンの集客、再来、客単価、店舗運営、AI活用を支援するコンサルティングサービスです。",
+        "provider": {
+          "@id": "https://will-next1.github.io/will-next/#organization"
+        },
+        "areaServed": "JP",
+        "serviceType": "美容サロン経営支援"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "トップ",
+            "item": "https://will-next1.github.io/will-next/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "美容サロン経営支援",
+            "item": "https://will-next1.github.io/will-next/salon-consulting/"
+          }
+        ]
+      }
+    ]
   }
   </script>
 </head>
@@ -66,7 +83,7 @@
 <div class="page-shell">
   <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-brand-accent shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4 min-h-[68px] md:min-h-[72px]">
-      <a href="../index.html" class="flex items-center gap-2 min-w-0" aria-label="ウィルネクスト合同会社 トップページ">
+      <a href="../" class="flex items-center gap-2 min-w-0" aria-label="ウィルネクスト合同会社 トップページ">
         <img src="../images/logo-optimized.webp" alt="" width="56" height="56" class="w-10 h-10 sm:w-12 sm:h-12 md:w-11 md:h-11 object-contain">
         <div class="min-w-0">
           <span class="block font-serif font-black tracking-widest text-brand-navy text-base sm:text-lg">WILL NEXT</span>
@@ -74,24 +91,31 @@
         </div>
       </a>
       <nav class="desktop-nav hidden md:flex items-center justify-end gap-5 lg:gap-8 text-xs lg:text-sm font-semibold tracking-wide" aria-label="メインナビゲーション">
-        <a href="../index.html" class="text-brand-dark hover:text-brand-gold border-b-2 border-transparent hover:border-brand-gold pb-1 whitespace-nowrap">トップ</a>
-        <a href="index.html" class="text-brand-gold border-b-2 border-brand-gold pb-1 whitespace-nowrap">料金プラン</a>
+        <a href="../" class="text-brand-dark hover:text-brand-gold border-b-2 border-transparent hover:border-brand-gold pb-1 whitespace-nowrap">トップ</a>
+        <a href="./" class="text-brand-gold border-b-2 border-brand-gold pb-1 whitespace-nowrap">料金プラン</a>
         <a href="../web-production/" class="text-brand-dark hover:text-brand-gold border-b-2 border-transparent hover:border-brand-gold pb-1 whitespace-nowrap">ホームページ制作</a>
         <a href="https://will-next1.github.io/salon-hearing-sheet/" class="text-brand-dark hover:text-brand-gold border-b-2 border-transparent hover:border-brand-gold pb-1 whitespace-nowrap">サロン診断</a>
-        <a href="../index.html#contact" class="text-brand-dark hover:text-brand-gold border-b-2 border-transparent hover:border-brand-gold pb-1 whitespace-nowrap">お問い合わせ</a>
+        <a href="../#contact" class="text-brand-dark hover:text-brand-gold border-b-2 border-transparent hover:border-brand-gold pb-1 whitespace-nowrap">お問い合わせ</a>
       </nav>
       <button type="button" data-mobile-menu-button aria-expanded="false" aria-label="メニューを開く" class="md:hidden w-11 h-11 rounded-full border border-brand-accent text-brand-navy text-xl">☰</button>
     </div>
     <nav data-mobile-menu class="mobile-nav hidden md:hidden grid grid-cols-2 gap-2 border-t border-brand-accent/50 bg-white/95 p-3 text-sm font-semibold shadow-sm" aria-label="モバイルナビゲーション">
-      <a href="../index.html" class="flex min-h-11 items-center justify-center rounded-lg border border-brand-accent/40 px-3 py-2 text-[#465F7E]">トップ</a>
-      <a href="index.html" class="flex min-h-11 items-center justify-center rounded-lg border border-brand-accent/40 bg-[#EEF8FC] px-3 py-2 text-[#27769B]">料金プラン</a>
+      <a href="../" class="flex min-h-11 items-center justify-center rounded-lg border border-brand-accent/40 px-3 py-2 text-[#465F7E]">トップ</a>
+      <a href="./" class="flex min-h-11 items-center justify-center rounded-lg border border-brand-accent/40 bg-[#EEF8FC] px-3 py-2 text-[#27769B]">料金プラン</a>
       <a href="../web-production/" class="flex min-h-11 items-center justify-center rounded-lg border border-brand-accent/40 px-3 py-2 text-center text-[#465F7E]">ホームページ制作</a>
       <a href="https://will-next1.github.io/salon-hearing-sheet/" class="flex min-h-11 items-center justify-center rounded-lg border border-brand-accent/40 px-3 py-2 text-[#465F7E]">サロン診断</a>
-      <a href="../index.html#contact" class="col-span-2 flex min-h-11 items-center justify-center rounded-lg bg-[#27769B] px-3 py-2 text-white">お問い合わせ</a>
+      <a href="../#contact" class="col-span-2 flex min-h-11 items-center justify-center rounded-lg bg-[#27769B] px-3 py-2 text-white">お問い合わせ</a>
     </nav>
   </header>
 
   <main>
+    <nav aria-label="パンくずリスト" class="border-b border-brand-accent/60 bg-white">
+      <ol class="max-w-7xl mx-auto min-h-10 px-4 sm:px-6 lg:px-8 flex items-center gap-2 text-xs text-[#6B7888]">
+        <li><a href="../" class="hover:text-brand-gold underline-offset-4 hover:underline">トップ</a></li>
+        <li aria-hidden="true">/</li>
+        <li aria-current="page" class="text-[#465F7E]">美容サロン経営支援</li>
+      </ol>
+    </nav>
     <section class="brand-pattern relative py-16 md:py-24 border-b border-brand-accent">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-[1.08fr_0.92fr] gap-10 items-center">
         <div>
@@ -394,7 +418,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid md:grid-cols-3 gap-8 items-center pb-8 border-b border-white/10">
         <div class="text-center md:text-left"><span class="font-serif text-2xl font-black tracking-widest text-white">WILL NEXT</span><p class="text-[10px] text-white/60 mt-2">美容サロン専門コンサルティング</p></div>
-        <div class="flex flex-wrap justify-center gap-4 text-xs font-medium text-white/80"><a href="../index.html" class="hover:text-brand-gold">公式トップ</a><a href="#support" class="hover:text-brand-gold">支援内容</a><a href="#pricing" class="hover:text-brand-gold">料金</a><a href="../web-production/index.html" class="hover:text-brand-gold">ホームページ制作</a></div>
+        <div class="flex flex-wrap justify-center gap-4 text-xs font-medium text-white/80"><a href="../" class="hover:text-brand-gold">公式トップ</a><a href="#support" class="hover:text-brand-gold">支援内容</a><a href="#pricing" class="hover:text-brand-gold">料金</a><a href="../web-production/" class="hover:text-brand-gold">ホームページ制作</a></div>
         <div class="text-center md:text-right text-xs space-y-1 text-white/75"><p>千葉県鎌ケ谷市東中沢1-11-36</p><p><a href="tel:09061881722">090-6188-1722</a></p></div>
       </div>
       <p class="pt-8 text-center text-xs text-white/50">© <span data-current-year>2026</span> WILL NEXT LLC. All Rights Reserved.</p>
