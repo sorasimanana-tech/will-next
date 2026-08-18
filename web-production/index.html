@@ -6,6 +6,7 @@
   <link rel="canonical" href="https://will-next1.github.io/will-next/web-production/">
   <meta name="description" content="小規模店舗・事業者向けホームページ制作。スマホ対応、問い合わせ導線、基本SEO、AIO・AEO対応込み。更新頻度に合う無理のない制作方法をご提案します。">
   <meta name="theme-color" content="#1A3050">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192.png">
   <link rel="icon" type="image/png" sizes="48x48" href="../favicon-48.png">
   <link rel="icon" type="image/png" sizes="512x512" href="../favicon-512.png">
@@ -15,33 +16,20 @@
   <meta property="og:site_name" content="ウィルネクスト合同会社">
   <meta property="og:title" content="ホームページ制作 | ウィルネクスト合同会社">
   <meta property="og:description" content="小規模店舗・事業者向け。基本SEO・AIO・AEO対応を含むホームページ制作。">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:url" content="https://will-next1.github.io/will-next/web-production/">
+  <meta property="og:image" content="https://will-next1.github.io/will-next/images/willnext-firstview-bg.jpg">
+  <meta property="og:image:width" content="1672">
+  <meta property="og:image:height" content="941">
+  <meta property="og:image:alt" content="ウィルネクスト合同会社のブランドイメージ">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ホームページ制作 | ウィルネクスト合同会社">
+  <meta name="twitter:description" content="小規模店舗・事業者向け。基本SEO・AIO・AEO対応を含むホームページ制作。">
+  <meta name="twitter:image" content="https://will-next1.github.io/will-next/images/willnext-firstview-bg.jpg">
   <title>ホームページ制作 | 基本SEO・AIO・AEO対応込み | ウィルネクスト合同会社</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../assets/tailwind.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&amp;family=Noto+Serif+JP:wght@400;700;900&amp;display=swap" rel="stylesheet">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ["Inter", "sans-serif"],
-            serif: ["Noto Serif JP", "serif"]
-          },
-          colors: {
-            brand: {
-              navy: "#1A3050",
-              gold: "#8A6C42",
-              darkGold: "#6F532F",
-              accent: "#E6DCD0",
-              dark: "#2A2A2A"
-            }
-          }
-        }
-      }
-    };
-  </script>
   <link rel="stylesheet" href="../assets/lp.css">
   <script type="application/ld+json">
   {
@@ -237,7 +225,7 @@
           <h2 class="section-title font-serif text-3xl font-bold mt-3">ホームページ制作サンプル</h2>
           <p class="mt-4 text-sm leading-7 text-[#6B7888]">業種や雰囲気に合わせたデザイン見本です。画像を押すと大きく確認できます。</p>
         </div>
-        <div class="mt-8 flex flex-wrap justify-center gap-2" aria-label="サンプルカテゴリー">
+        <div class="mt-8 flex flex-wrap justify-center gap-2" role="group" aria-label="サンプルカテゴリー">
           <button type="button" class="filter-button is-active" data-filter="all" aria-pressed="true">すべて</button>
           <button type="button" class="filter-button" data-filter="beauty" aria-pressed="false">美容サロン</button>
           <button type="button" class="filter-button" data-filter="food" aria-pressed="false">飲食店</button>
@@ -383,7 +371,7 @@
           <article class="white-card price-card price-card--featured">
             <span class="price-badge self-start">更新が少ない方向け</span>
             <h3 class="font-serif text-2xl font-bold text-[#465F7E] mt-4">シンプルホームページ制作</h3>
-            <p class="plan-price mt-6" aria-label="99,000円、税込">
+            <p class="plan-price mt-6">
               <span class="plan-price__number">99,000</span><span class="plan-price__yen">円</span><span class="plan-price__tax">税込</span>
             </p>
             <p class="mt-4 text-sm leading-7 text-[#6B7888]">
@@ -399,7 +387,7 @@
           <article class="white-card price-card">
             <span class="price-badge self-start">自分で更新したい方向け</span>
             <h3 class="font-serif text-2xl font-bold text-[#465F7E] mt-4">ホームページ作成サービス制作代行</h3>
-            <p class="plan-price mt-6" aria-label="66,000円、税込">
+            <p class="plan-price mt-6">
               <span class="plan-price__number">66,000</span><span class="plan-price__yen">円</span><span class="plan-price__tax">税込</span>
             </p>
             <p class="mt-4 text-sm leading-7 text-[#6B7888]">Googleサイト、Jimdoなどを利用し、写真、料金、お知らせをお客様自身で更新できる形にします。</p>
@@ -481,9 +469,9 @@
   </footer>
 </div>
 
-<div class="image-modal" data-image-modal role="dialog" aria-modal="true" aria-hidden="true" aria-label="制作サンプル拡大表示">
+<div class="image-modal" data-image-modal role="dialog" aria-modal="true" aria-hidden="true" aria-label="制作サンプル拡大表示" inert>
   <button type="button" class="image-modal__close" data-modal-close aria-label="閉じる">×</button>
-  <div class="image-modal__panel"><img data-modal-image src="" alt=""></div>
+  <div class="image-modal__panel"><img data-modal-image src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="" width="1536" height="1024"></div>
 </div>
 
 <script src="../assets/lp.js"></script>

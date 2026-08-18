@@ -61,6 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!modal) return;
     modal.classList.remove("is-open");
     modal.setAttribute("aria-hidden", "true");
+    modal.setAttribute("inert", "");
     document.body.style.overflow = "";
     if (lastFocusedElement) lastFocusedElement.focus();
   }
@@ -73,6 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
       lastFocusedElement = button;
       modalImage.src = image.getAttribute("data-full-image") || image.src;
       modalImage.alt = image.alt;
+      modal.removeAttribute("inert");
       modal.classList.add("is-open");
       modal.setAttribute("aria-hidden", "false");
       document.body.style.overflow = "hidden";
