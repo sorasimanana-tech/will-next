@@ -27,7 +27,8 @@ body {
 
 .page-shell {
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: clip;
+  overflow-y: visible;
 }
 
 .brand-pattern {
@@ -119,7 +120,7 @@ body {
 }
 
 .desktop-nav {
-  gap: clamp(0.8rem, 1.4vw, 1.35rem);
+  gap: 1.25rem;
   padding: 0.65rem 1rem;
   background: linear-gradient(90deg, rgba(238, 248, 252, 0.72), rgba(255, 255, 255, 0.92), rgba(246, 241, 235, 0.68));
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9);
@@ -159,7 +160,7 @@ body {
 }
 
 .mobile-nav {
-  padding: 0.55rem 0.75rem 0.8rem;
+  padding: 0.75rem;
 }
 
 .mobile-nav > a {
@@ -181,7 +182,14 @@ body {
 }
 
 .hero-feature-card {
+  position: absolute;
   box-shadow: 0 14px 34px rgba(26, 48, 80, 0.14);
+}
+
+@media (min-width: 1024px) {
+  .desktop-nav {
+    gap: 2rem;
+  }
 }
 
 .media-strategy-card::after {
