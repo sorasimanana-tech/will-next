@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://will-next1.github.io/will-next/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-08-24</lastmod>
   </url>
   <url>
     <loc>https://will-next1.github.io/will-next/web-production/</loc>
@@ -15,5 +15,13 @@
   <url>
     <loc>https://will-next1.github.io/will-next/salon-check.html</loc>
     <lastmod>2026-08-18</lastmod>
+  </url>
+  <url>
+    <loc>https://will-next1.github.io/will-next/privacy-policy/</loc>
+    <lastmod>2026-08-24</lastmod>
+  </url>
+  <url>
+    <loc>https://will-next1.github.io/will-next/service-terms/</loc>
+    <lastmod>2026-08-24</lastmod>
   </url>
 </urlset>
