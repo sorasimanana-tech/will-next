@@ -81,6 +81,7 @@
     ]
   }
   </script>
+  <link rel="stylesheet" href="../assets/chatbot.css">
 </head>
 <body class="font-sans antialiased">
 <div class="page-shell">
@@ -475,5 +476,30 @@
 </div>
 
 <script src="../assets/lp.js"></script>
+
+<!-- よくある質問チャット -->
+<button type="button" id="chatbot-button" aria-label="よくある質問を開く" aria-controls="chatbot-window" aria-expanded="false">
+  <span id="chatbot-button__icon" aria-hidden="true">💬</span>
+  <span>質問はこちら</span>
+</button>
+
+<div id="chatbot-window" role="dialog" aria-modal="false" aria-labelledby="chatbot-title" aria-hidden="true">
+  <div id="chatbot-header">
+    <div id="chatbot-title-group">
+      <span id="chatbot-title">よくある質問</span>
+      <span id="chatbot-subtitle">登録済みの回答をご案内します</span>
+    </div>
+    <button type="button" id="chatbot-close" aria-label="チャットを閉じる">✕</button>
+  </div>
+  <div id="chatbot-messages" role="log" aria-live="polite" aria-relevant="additions text"></div>
+  <div id="chatbot-input-area">
+    <input type="text" id="chatbot-input" aria-label="質問" placeholder="質問を入力してください" maxlength="200" autocomplete="off">
+    <button type="button" id="chatbot-send">送信</button>
+  </div>
+</div>
+
+<script src="../assets/chatbot-data.js"></script>
+<script src="../assets/chatbot-search.js"></script>
+<script src="../assets/chatbot-ui.js"></script>
 </body>
 </html>
