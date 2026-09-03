@@ -170,6 +170,7 @@ body {
   background: rgba(255, 255, 255, 0.9);
   padding: 0.8rem 0.95rem;
   color: var(--heading);
+  text-align: center;
 }
 
 .mobile-nav > a:last-child {
@@ -189,6 +190,23 @@ body {
 @media (min-width: 1024px) {
   .desktop-nav {
     gap: 2rem;
+  }
+}
+
+/* Keep the full navigation labels clear of the brand on narrower screens. */
+@media (max-width: 1199px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  [data-mobile-menu-button] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-nav:not(.hidden) {
+    display: grid;
   }
 }
 

@@ -56,19 +56,27 @@ document.addEventListener("DOMContentLoaded", function () {
   const modalImage = document.querySelector("[data-modal-image]");
   const modalClose = document.querySelector("[data-modal-close]");
   let lastFocusedElement = null;
+  let inertBackground = [];
+  let previousBodyOverflow = "";
 
   function closeModal() {
-    if (!modal) return;
+    if (!modal || !modal.classList.contains("is-open")) return;
     modal.classList.remove("is-open");
+    inertBackground.forEach(function (element) {
+      element.removeAttribute("inert");
+    });
+    inertBackground = [];
+    document.body.style.overflow = previousBodyOverflow;
+    if (lastFocusedElement && lastFocusedElement.isConnected) {
+      lastFocusedElement.focus({ preventScroll: true });
+    }
     modal.setAttribute("aria-hidden", "true");
     modal.setAttribute("inert", "");
-    document.body.style.overflow = "";
-    if (lastFocusedElement) lastFocusedElement.focus();
   }
 
   document.querySelectorAll("[data-sample-image]").forEach(function (button) {
     button.addEventListener("click", function () {
-      if (!modal || !modalImage) return;
+      if (!modal || !modalImage || !modalClose || modal.classList.contains("is-open")) return;
       const image = button.querySelector("img");
       if (!image) return;
       lastFocusedElement = button;
@@ -77,8 +85,17 @@ document.addEventListener("DOMContentLoaded", function () {
       modal.removeAttribute("inert");
       modal.classList.add("is-open");
       modal.setAttribute("aria-hidden", "false");
+      previousBodyOverflow = document.body.style.overflow;
       document.body.style.overflow = "hidden";
-      if (modalClose) modalClose.focus();
+      modalClose.focus({ preventScroll: true });
+      // This dialog is a direct child of body. Preserve any existing inert state.
+      inertBackground = Array.from(document.body.children).filter(function (element) {
+        return element !== modal && !element.hasAttribute("inert") &&
+          !["SCRIPT", "STYLE", "LINK"].includes(element.tagName);
+      });
+      inertBackground.forEach(function (element) {
+        element.setAttribute("inert", "");
+      });
     });
   });
 
@@ -90,7 +107,31 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape") closeModal();
+    if (!modal || !modal.classList.contains("is-open")) return;
+    if (event.key === "Escape") {
+      event.preventDefault();
+      closeModal();
+    } else if (event.key === "Tab") {
+      const focusable = Array.from(modal.querySelectorAll(
+        'a[href], button:not(:disabled), input:not(:disabled), select:not(:disabled), textarea:not(:disabled), [tabindex]:not([tabindex="-1"])'
+      )).filter(function (element) {
+        return element.tabIndex >= 0 && element.getClientRects().length > 0 && !element.closest("[inert]");
+      });
+      const first = focusable[0] || modalClose;
+      const last = focusable[focusable.length - 1] || modalClose;
+      if (!modal.contains(document.activeElement) ||
+          (event.shiftKey && document.activeElement === first) ||
+          (!event.shiftKey && document.activeElement === last)) {
+        event.preventDefault();
+        (event.shiftKey ? last : first).focus();
+      }
+    }
+  });
+
+  document.addEventListener("focusin", function (event) {
+    if (modal && modal.classList.contains("is-open") && !modal.contains(event.target)) {
+      modalClose.focus({ preventScroll: true });
+    }
   });
 
   document.querySelectorAll("[data-current-year]").forEach(function (node) {
